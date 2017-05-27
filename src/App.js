@@ -9,14 +9,19 @@ class App extends Component {
         {id:1, name:'Learn JSX',isComplete:true},
         {id:2, name:'Build an awesome app', isComplete: true},
         {id:3, name:'Ship it', isComplete:false}
-      ]
+      ],
+      currentToDo:''
     }
+    this.handleInputChange = this.handleInputChange.bind(this);
+  }
+  handleInputChange(evt){
+    this.setState({currentToDo:evt.target.value})
   }
   render() {
     return (
       <div className="toDoApp">
         <form>
-          <input type="text" />
+          <input type="text" value={this.state.currentToDo} onChange={this.handleInputChange}/>
         </form>
         <div className="toDoList">
           <ul>
