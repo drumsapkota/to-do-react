@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import {NewToDo} from './components/NewToDo'
 
 class App extends Component {
   constructor(){
@@ -20,9 +21,8 @@ class App extends Component {
   render() {
     return (
       <div className="toDoApp">
-        <form>
-          <input type="text" value={this.state.currentToDo} onChange={this.handleInputChange}/>
-        </form>
+        <NewToDo handleInputChange={this.handleInputChange}
+        currentToDo={this.state.currentToDo}/>
         <div className="toDoList">
           <ul>
             {this.state.todos.map(todo => <li key={todo.id}>
@@ -32,9 +32,10 @@ class App extends Component {
             
           </ul>
         </div>
-      </div>
+      </div> 
     );
   }
 }
+
 
 export default App;

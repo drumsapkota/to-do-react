@@ -15,3 +15,7 @@ ul{
 li{
 	list-style-type: none;
 }
+
+newToDo{
+	font-family: 'Arial',sans-serif;
+}
