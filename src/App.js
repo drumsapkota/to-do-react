@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import {NewToDo} from './components/NewToDo'
+import {NewToDo, ToDoList} from './components'
 
 class App extends Component {
   constructor(){
@@ -23,15 +23,7 @@ class App extends Component {
       <div className="toDoApp">
         <NewToDo handleInputChange={this.handleInputChange}
         currentToDo={this.state.currentToDo}/>
-        <div className="toDoList">
-          <ul>
-            {this.state.todos.map(todo => <li key={todo.id}>
-                  <input type="checkbox" defaultChecked={todo.isComplete}/>
-                  {todo.name}
-                </li>)}
-            
-          </ul>
-        </div>
+        <ToDoList todos={this.state.todos}/>
       </div> 
     );
   }
