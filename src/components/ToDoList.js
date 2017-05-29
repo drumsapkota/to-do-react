@@ -12,6 +12,3 @@ export const ToDoList = (props) => {
 	)
 }
 
-ToDoList.propTypes = {
-	todos: React.PropTypes.array.isRequired
-}

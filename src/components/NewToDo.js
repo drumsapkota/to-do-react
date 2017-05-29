@@ -8,7 +8,3 @@ export const NewToDo = (props) => (<div className="newToDo">
                             </form>
                           </div>);
 
-NewToDo.propTypes = {
-	currentToDo:React.PropTypes.string,
-	handleInputChange: React.PropTypes.func
-}

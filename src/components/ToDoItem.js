@@ -9,8 +9,3 @@ export const ToDoItem = (props) =>{
 		)
 }
 
-ToDoItem.propTypes = {
-	name: React.PropTypes.string.isRequired,
-	isComplete: React.PropTypes.bool,
-	id: React.PropTypes.number.isRequired
-}
